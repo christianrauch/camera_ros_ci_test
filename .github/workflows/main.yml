@@ -18,8 +18,9 @@ jobs:
         run: |
           sudo apt install python3-pip ninja-build python3-yaml python3-ply python3-jinja2 libgnutls28-dev
           sudo pip3 install meson
-          git clone https://git.libcamera.org/libcamera/libcamera.git --depth=1
+          git clone -n https://git.libcamera.org/libcamera/libcamera.git
           cd libcamera
+          git checkout --detach 5c85e7024027c90b1b054782e510691b8b9c7419
           meson build --buildtype release -Dcam=disabled -Ddocumentation=disabled -Dgstreamer=disabled -Dipas="" -Dlc-compliance=disabled -Dpipelines=simple -Dqcam=disabled -Dtest=false -Dtracing=disabled -Dv4l2=false
           meson compile -C build
           sudo meson install -C build
