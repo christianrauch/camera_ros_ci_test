@@ -14,11 +14,6 @@ jobs:
     continue-on-error: ${{ matrix.distribution == 'rolling' }}
 
     steps:
-      - name: install libcamera dependencies
-        run: |
-          sudo apt install python3-pip ninja-build python3-yaml python3-ply python3-jinja2 libgnutls28-dev
-          sudo pip3 install meson
-
       - name: fetch source
         uses: actions/checkout@v2
 
