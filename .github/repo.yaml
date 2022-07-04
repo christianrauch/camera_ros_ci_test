@@ -1,5 +1,5 @@
 repositories:
   src/libcamera_cmake:
     type: git
-    url: https://github.com/christianrauch/libcamera_cmake.git
-    version: main
+    url: https://github.com/christianrauch/libcamera.git
+    version: span_size
