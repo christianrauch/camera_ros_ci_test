@@ -2,4 +2,4 @@ repositories:
   src/libcamera_cmake:
     type: git
     url: https://github.com/christianrauch/libcamera.git
-    version: span_size
+    version: package-xml
